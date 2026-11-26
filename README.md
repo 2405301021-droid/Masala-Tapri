@@ -2,8 +2,8 @@
 
 A full-stack website for a small chai shop. Visitors can read the story, browse a menu, and send a message through a contact form. The menu is served by a backend API and the messages are saved on the server.
 
-**Author:** YOUR NAME HERE  
-**Roll number:** YOUR ROLL NUMBER HERE  
+**Author:** ARPIT
+**Roll number:** 2405301021  
 **Course:** AI for BBA (UG) Advanced
 
 **Live frontend (Cloudflare):** https://shy-sound-bf35.2405301021.workers.dev
