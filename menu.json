@@ -1,0 +1,89 @@
+{
+  "currency": "INR",
+  "categories": [
+    {
+      "id": "chai",
+      "title": "Chai",
+      "items": [
+        {
+          "name": "Kadak Masala Chai",
+          "description": "Strong assam, ginger, cardamom and clove.",
+          "price": 30,
+          "tag": "Most ordered"
+        },
+        {
+          "name": "Elaichi Chai",
+          "description": "Milky and fragrant, with green cardamom only.",
+          "price": 30
+        },
+        {
+          "name": "Adrak Chai",
+          "description": "Fresh ginger for cold mornings and sore throats.",
+          "price": 30
+        },
+        {
+          "name": "Kulhad Chai",
+          "description": "Kadak chai in a clay cup.",
+          "price": 40
+        },
+        {
+          "name": "Saffron Doodh Chai",
+          "description": "Milk-forward, with saffron strands added at the first boil.",
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "cold",
+      "title": "Cold drinks",
+      "items": [
+        {
+          "name": "Iced Lemon Tea",
+          "description": "Black tea, lemon and a little jaggery, over ice.",
+          "price": 50
+        },
+        {
+          "name": "Mint Cooler",
+          "description": "Crushed mint, lime, black salt and soda.",
+          "price": 50
+        },
+        {
+          "name": "Peach Iced Tea",
+          "description": "Peach pulp stirred into chilled black tea.",
+          "price": 60
+        },
+        {
+          "name": "Nimbu Soda",
+          "description": "Sweet, salted or mixed. Pick when you order.",
+          "price": 40
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "title": "Snacks",
+      "items": [
+        {
+          "name": "Bun Maska",
+          "description": "Toasted bun with salted butter.",
+          "price": 45
+        },
+        {
+          "name": "Bread Pakora",
+          "description": "Gram-flour fried bread with mint chutney.",
+          "price": 35
+        },
+        {
+          "name": "Samosa (2 pieces)",
+          "description": "Potato and pea filling, served with tamarind chutney.",
+          "price": 40
+        },
+        {
+          "name": "Veg Grilled Sandwich",
+          "description": "Cucumber, tomato, onion and green chutney, pressed until golden.",
+          "price": 70
+        }
+      ]
+    }
+  ]
+}

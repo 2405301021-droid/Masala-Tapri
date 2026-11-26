@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Steel glass of chai with rising steam">
+  <style>
+    .steam{fill:none;stroke:#F6F7FB;stroke-width:7;stroke-linecap:round;opacity:0;animation:rise 4.5s ease-in-out infinite}
+    .s2{animation-delay:1.5s}.s3{animation-delay:3s}
+    @keyframes rise{0%{opacity:0;transform:translateY(26px)}30%{opacity:.75}100%{opacity:0;transform:translateY(-34px)}}
+    @media (prefers-reduced-motion:reduce){.steam{animation:none;opacity:.55}}
+  </style>
+  <ellipse cx="200" cy="452" rx="130" ry="17" fill="#8F97C9"/>
+  <ellipse cx="200" cy="446" rx="130" ry="17" fill="#B9BFE4"/>
+  <path d="M108 200 L292 200 L272 424 Q270 444 250 444 L150 444 Q130 444 128 424 Z" fill="#DDE1F3"/>
+  <path d="M115 240 L285 240 L271 418 Q269 434 251 434 L149 434 Q131 434 129 418 Z" fill="#C97A1E"/>
+  <ellipse cx="200" cy="240" rx="85" ry="13" fill="#E9A64A"/>
+  <path d="M117 300 Q200 316 283 300 M122 362 Q200 378 278 362" stroke="#fff" stroke-opacity=".55" stroke-width="5" fill="none"/>
+  <path d="M138 214 L150 420" stroke="#fff" stroke-opacity=".6" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="200" cy="200" rx="92" ry="14" fill="#F4F5FB"/>
+  <ellipse cx="200" cy="200" rx="80" ry="9" fill="#9AA1CC"/>
+  <path class="steam" d="M165 172 C145 145 185 125 165 92"/>
+  <path class="steam s2" d="M205 168 C185 138 225 112 205 74"/>
+  <path class="steam s3" d="M245 172 C225 148 265 128 245 98"/>
+  <g fill="#F4B63A"><circle cx="70" cy="110" r="7"/><circle cx="335" cy="150" r="5"/><circle cx="318" cy="60" r="9"/></g>
+</svg>

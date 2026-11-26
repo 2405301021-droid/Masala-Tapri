@@ -5,189 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Masala Tapri | Slow-brewed chai and fresh snacks</title>
   <meta name="description" content="Small-batch masala chai, kulhad chai and snacks, brewed fresh every day.">
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMyMzJDNkIiLz48cGF0aCBkPSJNMTggMjYgSDQ2IEw0MyA1MiBRNDIuNiA1NSA0MCA1NSBIMjQgUTIxLjQgNTUgMjEgNTIgWiIgZmlsbD0iI0Y0QjYzQSIvPjxwYXRoIGQ9Ik0yNiAyMCBDMjIgMTUgMjkgMTIgMjYgNyBNMzQgMjAgQzMwIDE0IDM4IDExIDM0IDUgTTQyIDIwIEMzOCAxNiA0NSAxMyA0MiA5IiBzdHJva2U9IiNGNkY3RkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+PC9zdmc+Cg==" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-/* Masala Tapri — shared styles */
-:root{
-  --ink:#161A33;
-  --indigo:#232C6B;
-  --indigo-deep:#192050;
-  --turmeric:#F4B63A;
-  --cardamom:#2E6B52;
-  --milk:#F6F7FB;
-  --mist:#E3E7F4;
-  --muted:#4A5075;
-  --radius:10px;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;color:var(--ink);background:var(--milk);line-height:1.65}
-img,svg{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em;margin:0 0 .5em}
-h1{font-size:clamp(2.6rem,7vw,4.8rem);font-weight:800}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700}
-h3{font-size:1.25rem;font-weight:700}
-p{margin:0 0 1em;max-width:62ch}
-a{color:var(--indigo)}
-.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
-.section{padding:clamp(3rem,8vw,5.5rem) 0}
-.section--mist{background:var(--mist)}
-:focus-visible{outline:3px solid var(--turmeric);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:0;background:var(--turmeric);color:var(--ink);padding:.6rem 1rem;z-index:100}
-.skip:focus{left:0}
-
-/* Header */
-.site-header{background:var(--indigo);color:var(--milk);position:sticky;top:0;z-index:50}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px}
-.brand{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.4rem;color:var(--milk);text-decoration:none;display:flex;align-items:center;gap:.6rem}
-.brand img{width:32px;height:32px}
-.nav-toggle{display:none;background:none;border:2px solid var(--milk);color:var(--milk);border-radius:var(--radius);padding:.4rem .6rem;cursor:pointer}
-.nav-toggle svg{width:22px;height:22px}
-.nav ul{list-style:none;display:flex;gap:.4rem;margin:0;padding:0}
-.nav a{color:var(--milk);text-decoration:none;padding:.5rem .9rem;border-radius:999px;font-weight:600}
-.nav a:hover{background:var(--indigo-deep)}
-.nav a[aria-current="page"]{background:var(--turmeric);color:var(--ink)}
-
-/* Buttons */
-.btn{display:inline-block;font:inherit;font-weight:700;padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer}
-.btn--primary{background:var(--turmeric);color:var(--ink)}
-.btn--primary:hover{background:#ffc552}
-.btn--ghost{border-color:var(--milk);color:var(--milk)}
-.btn--ghost:hover{background:rgba(255,255,255,.12)}
-.btn--dark{background:var(--indigo);color:var(--milk)}
-.btn--dark:hover{background:var(--indigo-deep)}
-.btn-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
-
-/* Hero */
-.hero{background:var(--indigo);color:var(--milk);overflow:hidden}
-.hero .wrap{display:grid;gap:2rem;align-items:center;padding-block:clamp(2.5rem,7vw,5rem)}
-.hero h1{margin-bottom:.35em}
-.hero p{font-size:1.2rem;color:#D5DAF2}
-.hero-art{max-width:380px;margin-inline:auto}
-
-.page-head{background:var(--indigo);color:var(--milk);padding:clamp(2.5rem,6vw,4rem) 0}
-.page-head h2{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:.3em}
-.page-head p{color:#D5DAF2;font-size:1.15rem;margin:0}
-
-/* Menu list */
-.menu-group{margin-bottom:3rem}
-.menu-group h2{border-bottom:3px solid var(--turmeric);display:inline-block;padding-bottom:.15em}
-.item{display:flex;justify-content:space-between;gap:1.5rem;padding:1.1rem 0;border-bottom:1px dashed #9AA1CC}
-.item h3{margin:0 0 .15em}
-.item p{margin:0;color:var(--muted)}
-.price{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:1.3rem;white-space:nowrap}
-.tag{display:inline-block;background:var(--cardamom);color:#fff;font-size:.8rem;font-weight:700;border-radius:999px;padding:.05rem .6rem;margin-left:.5rem;vertical-align:middle}
-
-.filters{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
-.chip{font:inherit;font-weight:600;border:2px solid var(--indigo);background:transparent;color:var(--indigo);padding:.45rem 1.1rem;border-radius:999px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--indigo);color:var(--milk)}
-.menu-group[hidden]{display:none}
-
-/* Steps (a real sequence) */
-.steps{list-style:none;counter-reset:step;padding:0;margin:2rem 0 0;display:grid;gap:1.5rem}
-.steps li{counter-increment:step;border-top:4px solid var(--indigo);padding-top:1rem}
-.steps li::before{content:counter(step);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:2.4rem;color:var(--cardamom);display:block;line-height:1}
-.steps p{color:var(--muted);margin:0}
-
-/* Split layout */
-.split{display:grid;gap:2.5rem;align-items:center}
-.split-art{max-width:320px;margin-inline:auto}
-
-/* Info blocks */
-.hours{width:100%;border-collapse:collapse;max-width:420px}
-.hours th,.hours td{text-align:left;padding:.55rem 0;border-bottom:1px dashed #9AA1CC;font-weight:500}
-.hours td{text-align:right;font-weight:700}
-.stat-strip{display:grid;gap:1.5rem;margin-top:2rem}
-.stat-strip strong{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.5rem}
-
-/* Form */
-.form{display:grid;gap:1.1rem;max-width:560px}
-.field label{display:block;font-weight:700;margin-bottom:.3rem}
-.field input,.field textarea,.field select{width:100%;font:inherit;padding:.75rem .9rem;border:2px solid #9AA1CC;border-radius:var(--radius);background:#fff;color:var(--ink)}
-.field textarea{min-height:140px;resize:vertical}
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--indigo);outline:3px solid var(--turmeric);outline-offset:1px}
-.field .error{color:#A3201A;font-weight:600;margin:.3rem 0 0;min-height:1.2em;font-size:.95rem}
-.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#A3201A}
-.notice{background:var(--cardamom);color:#fff;padding:1rem 1.2rem;border-radius:var(--radius);font-weight:600;max-width:560px}
-.notice[hidden]{display:none}
-.contact-grid{display:grid;gap:3rem}
-
-/* CTA band + footer */
-.cta{background:var(--turmeric);color:var(--ink);text-align:center}
-.cta p{margin-inline:auto}
-.site-footer{background:var(--indigo-deep);color:#D5DAF2;padding:2.5rem 0 2rem}
-.site-footer .wrap{display:grid;gap:1.5rem}
-.site-footer a{color:var(--milk)}
-.site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1rem}
-.site-footer small{display:block;opacity:.8}
-
-/* Larger screens */
-@media (min-width:800px){
-  .hero .wrap{grid-template-columns:1.25fr .75fr}
-  .steps{grid-template-columns:repeat(4,1fr)}
-  .split{grid-template-columns:1fr 1fr}
-  .split--flip .split-art{order:2}
-  .stat-strip{grid-template-columns:repeat(3,1fr)}
-  .contact-grid{grid-template-columns:1.2fr .8fr}
-  .site-footer .wrap{grid-template-columns:1fr auto;align-items:center}
-}
-/* Phones: collapsible nav */
-@media (max-width:799px){
-  .nav-toggle{display:block}
-  .nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--indigo);padding:0 1.25rem 1rem}
-  .nav.open{display:block}
-  .nav ul{flex-direction:column}
-  .nav a{display:block}
-  .item{flex-direction:column;gap:.3rem}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-section[id]{scroll-margin-top:68px}
-
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#home"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMyMzJDNkIiLz48cGF0aCBkPSJNMTggMjYgSDQ2IEw0MyA1MiBRNDIuNiA1NSA0MCA1NSBIMjQgUTIxLjQgNTUgMjEgNTIgWiIgZmlsbD0iI0Y0QjYzQSIvPjxwYXRoIGQ9Ik0yNiAyMCBDMjIgMTUgMjkgMTIgMjYgNyBNMzQgMjAgQzMwIDE0IDM4IDExIDM0IDUgTTQyIDIwIEMzOCAxNiA0NSAxMyA0MiA5IiBzdHJva2U9IiNGNkY3RkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+PC9zdmc+Cg==" alt="" width="32" height="32">Masala Tapri</a>
+      <a class="brand" href="index.html"><img src="images/favicon.svg" alt="" width="32" height="32">Masala Tapri</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
       <nav class="nav" id="nav" aria-label="Main">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-
-    <section class="hero" id="home">
+    <section class="hero">
       <div class="wrap">
         <div>
           <h1>Chai, brewed the slow way.</h1>
           <p>Masala Tapri is a small tea shop serving freshly ground spices, loose-leaf assam and clay-cup chai from 7 in the morning until the last customer leaves.</p>
           <div class="btn-row">
-            <a class="btn btn--primary" href="#menu">See the menu</a>
-            <a class="btn btn--ghost" href="#contact">Find us</a>
+            <a class="btn btn--primary" href="menu.html">See the menu</a>
+            <a class="btn btn--ghost" href="contact.html">Find us</a>
           </div>
         </div>
-        <img class="hero-art" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDgwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlN0ZWVsIGdsYXNzIG9mIGNoYWkgd2l0aCByaXNpbmcgc3RlYW0iPgogIDxzdHlsZT4KICAgIC5zdGVhbXtmaWxsOm5vbmU7c3Ryb2tlOiNGNkY3RkI7c3Ryb2tlLXdpZHRoOjc7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7b3BhY2l0eTowO2FuaW1hdGlvbjpyaXNlIDQuNXMgZWFzZS1pbi1vdXQgaW5maW5pdGV9CiAgICAuczJ7YW5pbWF0aW9uLWRlbGF5OjEuNXN9LnMze2FuaW1hdGlvbi1kZWxheTozc30KICAgIEBrZXlmcmFtZXMgcmlzZXswJXtvcGFjaXR5OjA7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoMjZweCl9MzAle29wYWNpdHk6Ljc1fTEwMCV7b3BhY2l0eTowO3RyYW5zZm9ybTp0cmFuc2xhdGVZKC0zNHB4KX19CiAgICBAbWVkaWEgKHByZWZlcnMtcmVkdWNlZC1tb3Rpb246cmVkdWNlKXsuc3RlYW17YW5pbWF0aW9uOm5vbmU7b3BhY2l0eTouNTV9fQogIDwvc3R5bGU+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjQ1MiIgcng9IjEzMCIgcnk9IjE3IiBmaWxsPSIjOEY5N0M5Ii8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjQ0NiIgcng9IjEzMCIgcnk9IjE3IiBmaWxsPSIjQjlCRkU0Ii8+CiAgPHBhdGggZD0iTTEwOCAyMDAgTDI5MiAyMDAgTDI3MiA0MjQgUTI3MCA0NDQgMjUwIDQ0NCBMMTUwIDQ0NCBRMTMwIDQ0NCAxMjggNDI0IFoiIGZpbGw9IiNEREUxRjMiLz4KICA8cGF0aCBkPSJNMTE1IDI0MCBMMjg1IDI0MCBMMjcxIDQxOCBRMjY5IDQzNCAyNTEgNDM0IEwxNDkgNDM0IFExMzEgNDM0IDEyOSA0MTggWiIgZmlsbD0iI0M5N0ExRSIvPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIyNDAiIHJ4PSI4NSIgcnk9IjEzIiBmaWxsPSIjRTlBNjRBIi8+CiAgPHBhdGggZD0iTTExNyAzMDAgUTIwMCAzMTYgMjgzIDMwMCBNMTIyIDM2MiBRMjAwIDM3OCAyNzggMzYyIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xMzggMjE0IEwxNTAgNDIwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuNiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZWxsaXBzZSBjeD0iMjAwIiBjeT0iMjAwIiByeD0iOTIiIHJ5PSIxNCIgZmlsbD0iI0Y0RjVGQiIvPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIyMDAiIHJ4PSI4MCIgcnk9IjkiIGZpbGw9IiM5QUExQ0MiLz4KICA8cGF0aCBjbGFzcz0ic3RlYW0iIGQ9Ik0xNjUgMTcyIEMxNDUgMTQ1IDE4NSAxMjUgMTY1IDkyIi8+CiAgPHBhdGggY2xhc3M9InN0ZWFtIHMyIiBkPSJNMjA1IDE2OCBDMTg1IDEzOCAyMjUgMTEyIDIwNSA3NCIvPgogIDxwYXRoIGNsYXNzPSJzdGVhbSBzMyIgZD0iTTI0NSAxNzIgQzIyNSAxNDggMjY1IDEyOCAyNDUgOTgiLz4KICA8ZyBmaWxsPSIjRjRCNjNBIj48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iNyIvPjxjaXJjbGUgY3g9IjMzNSIgY3k9IjE1MCIgcj0iNSIvPjxjaXJjbGUgY3g9IjMxOCIgY3k9IjYwIiByPSI5Ii8+PC9nPgo8L3N2Zz4K" alt="A steel glass of masala chai with steam rising" width="380" height="456">
+        <img class="hero-art" src="images/glass.svg" alt="A steel glass of masala chai with steam rising" width="380" height="456">
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <h2>What people order first</h2>
-        <p>Three things we are known for. The full list is on the <a href="#menu">menu page</a>.</p>
+        <p>Three things we are known for. The full list is on the <a href="menu.html">menu page</a>.</p>
         <div class="item">
       <div><h3>Kadak Masala Chai<span class="tag">Most ordered</span></h3><p>Strong assam, crushed ginger, green cardamom and a pinch of clove, boiled twice.</p></div>
       <span class="price">&#8377;30</span>
@@ -241,185 +102,9 @@ section[id]{scroll-margin-top:68px}
       <div class="wrap">
         <h2>Planning an event or an office order?</h2>
         <p>We fill 1-litre flasks and serve kulhad chai at small events. Tell us the date and headcount.</p>
-        <a class="btn btn--dark" href="#contact">Send us a message</a>
+        <a class="btn btn--dark" href="contact.html">Send us a message</a>
       </div>
     </section>
-  
-
-    <section class="page-head" id="menu">
-      <div class="wrap">
-        <h2>Menu</h2>
-        <p>Prices are in rupees and include all taxes.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="filters" role="group" aria-label="Filter menu by category">
-          <button class="chip" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" data-filter="chai" aria-pressed="false">Chai</button>
-          <button class="chip" data-filter="cold" aria-pressed="false">Cold drinks</button>
-          <button class="chip" data-filter="snacks" aria-pressed="false">Snacks</button>
-        </div>
-
-        <div class="menu-group" data-cat="chai">
-          <h2>Chai</h2>
-          <div class="item">
-      <div><h3>Kadak Masala Chai<span class="tag">Most ordered</span></h3><p>Strong assam, ginger, cardamom and clove.</p></div>
-      <span class="price">&#8377;30</span>
-    </div>
-    <div class="item">
-      <div><h3>Elaichi Chai</h3><p>Milky and fragrant, with green cardamom only.</p></div>
-      <span class="price">&#8377;30</span>
-    </div>
-    <div class="item">
-      <div><h3>Adrak Chai</h3><p>Fresh ginger for cold mornings and sore throats.</p></div>
-      <span class="price">&#8377;30</span>
-    </div>
-    <div class="item">
-      <div><h3>Kulhad Chai</h3><p>Kadak chai in a clay cup.</p></div>
-      <span class="price">&#8377;40</span>
-    </div>
-    <div class="item">
-      <div><h3>Saffron Doodh Chai</h3><p>Milk-forward, with saffron strands added at the first boil.</p></div>
-      <span class="price">&#8377;60</span>
-    </div>
-        </div>
-
-        <div class="menu-group" data-cat="cold">
-          <h2>Cold drinks</h2>
-          <div class="item">
-      <div><h3>Iced Lemon Tea</h3><p>Black tea, lemon and a little jaggery, over ice.</p></div>
-      <span class="price">&#8377;50</span>
-    </div>
-    <div class="item">
-      <div><h3>Mint Cooler</h3><p>Crushed mint, lime, black salt and soda.</p></div>
-      <span class="price">&#8377;50</span>
-    </div>
-    <div class="item">
-      <div><h3>Peach Iced Tea</h3><p>Peach pulp stirred into chilled black tea.</p></div>
-      <span class="price">&#8377;60</span>
-    </div>
-    <div class="item">
-      <div><h3>Nimbu Soda</h3><p>Sweet, salted or mixed. Pick when you order.</p></div>
-      <span class="price">&#8377;40</span>
-    </div>
-        </div>
-
-        <div class="menu-group" data-cat="snacks">
-          <h2>Snacks</h2>
-          <div class="item">
-      <div><h3>Bun Maska</h3><p>Toasted bun with salted butter.</p></div>
-      <span class="price">&#8377;45</span>
-    </div>
-    <div class="item">
-      <div><h3>Bread Pakora</h3><p>Gram-flour fried bread with mint chutney.</p></div>
-      <span class="price">&#8377;35</span>
-    </div>
-    <div class="item">
-      <div><h3>Samosa (2 pieces)</h3><p>Potato and pea filling, served with tamarind chutney.</p></div>
-      <span class="price">&#8377;40</span>
-    </div>
-    <div class="item">
-      <div><h3>Veg Grilled Sandwich</h3><p>Cucumber, tomato, onion and green chutney, pressed until golden.</p></div>
-      <span class="price">&#8377;70</span>
-    </div>
-        </div>
-      </div>
-    </section>
-  
-
-    <section class="page-head" id="about">
-      <div class="wrap">
-        <h2>About Masala Tapri</h2>
-        <p>A neighbourhood tea shop built around one idea: chai should taste like someone made it for you.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap split">
-        <div>
-          <h2>Our story</h2>
-          <p>Masala Tapri started as a single stove and a steel kettle outside a bus stop. Regulars asked for stronger tea, then for ginger, then for a place to sit. The shop grew from those requests.</p>
-          <p>Today we still make every pot by hand. We buy loose assam leaf from one supplier, grind our spices before opening and never use premixed powder.</p>
-        </div>
-        <img class="split-art" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzQwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNsYXkga3VsaGFkIGN1cCBmaWxsZWQgd2l0aCBjaGFpIj4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMzE2IiByeD0iMTA1IiByeT0iMTQiIGZpbGw9IiMxOTIwNTAiIG9wYWNpdHk9Ii4xOCIvPgogIDxwYXRoIGQ9Ik03MCA5MCBMMjUwIDkwIEwyMjIgMjk2IFEyMTkgMzE0IDIwMCAzMTQgTDEyMCAzMTQgUTEwMSAzMTQgOTggMjk2IFoiIGZpbGw9IiMyMzJDNkIiLz4KICA8cGF0aCBkPSJNNzAgOTAgTDI1MCA5MCBMMjQ2IDEyMCBMNzQgMTIwIFoiIGZpbGw9IiMyRTNBOEMiLz4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iOTAiIHJ4PSI5MCIgcnk9IjE2IiBmaWxsPSIjRjRCNjNBIi8+CiAgPGVsbGlwc2UgY3g9IjE2MCIgY3k9IjkyIiByeD0iNzYiIHJ5PSIxMCIgZmlsbD0iI0M5N0ExRSIvPgogIDxwYXRoIGQ9Ik04OCAxNjAgTDIzMiAxNjAgTTk2IDIwNSBMMjI0IDIwNSBNMTA0IDI1MCBMMjE2IDI1MCIgc3Ryb2tlPSIjRjRCNjNBIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMiAxNCIvPgogIDxwYXRoIGQ9Ik05NiAxMjQgTDExMiAyOTAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZyBmaWxsPSIjMkU2QjUyIj48ZWxsaXBzZSBjeD0iNDIiIGN5PSI2MCIgcng9IjE0IiByeT0iNyIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwIDQyIDYwKSIvPjxlbGxpcHNlIGN4PSIyODIiIGN5PSI0OCIgcng9IjEyIiByeT0iNiIgdHJhbnNmb3JtPSJyb3RhdGUoMzAgMjgyIDQ4KSIvPjxlbGxpcHNlIGN4PSIyNzAiIGN5PSI5MCIgcng9IjkiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtMTAgMjcwIDkwKSIvPjwvZz4KPC9zdmc+Cg==" alt="A clay kulhad cup of chai with cardamom leaves around it" width="320" height="340">
-      </div>
-    </section>
-
-    <section class="section section--mist">
-      <div class="wrap">
-        <h2>What we stand for</h2>
-        <div class="stat-strip">
-          <div><strong>Fresh spices</strong>Ground every morning in small batches, so the aroma is still in the cup.</div>
-          <div><strong>Fair prices</strong>Nothing on the menu costs more than &#8377;100, because chai is an everyday habit.</div>
-          <div><strong>Less waste</strong>Clay cups are biodegradable and we give a discount when you bring your own flask.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2>The team</h2>
-        <p>Five people run the shop: two chai makers, one snack cook, one person on the counter and the owner, who still works the morning shift. If you come early, you will meet everyone.</p>
-        <a class="btn btn--dark" href="#contact">Say hello</a>
-      </div>
-    </section>
-  
-
-    <section class="page-head" id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p>Questions, bulk orders or event bookings. We reply within a day.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap contact-grid">
-        <div>
-          <h2>Send a message</h2>
-          <p id="form-notice" class="notice" role="status" hidden></p>
-          <form class="form" id="contact-form" novalidate>
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
-              <p class="error" id="name-error"></p>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-              <p class="error" id="email-error"></p>
-            </div>
-            <div class="field">
-              <label for="topic">Topic</label>
-              <select id="topic" name="topic">
-                <option>General question</option>
-                <option>Office or bulk order</option>
-                <option>Event booking</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-              <p class="error" id="message-error"></p>
-            </div>
-            <button class="btn btn--dark" type="submit">Send message</button>
-          </form>
-        </div>
-
-        <div>
-          <h2>Visit us</h2>
-          <p>12 Station Road, Your City<br>Phone: +91 98765 43210<br>Email: <a href="mailto:hello@masalatapri.example">hello@masalatapri.example</a></p>
-          <table class="hours">
-            <caption class="skip">Opening hours</caption>
-            <tr><th scope="row">Mon &ndash; Fri</th><td>7:00 am &ndash; 10:00 pm</td></tr>
-            <tr><th scope="row">Saturday</th><td>7:00 am &ndash; 11:00 pm</td></tr>
-            <tr><th scope="row">Sunday</th><td>8:00 am &ndash; 11:00 pm</td></tr>
-          </table>
-        </div>
-      </div>
-    </section>
-  
   </main>
 
   <footer class="site-footer">
@@ -430,90 +115,13 @@ section[id]{scroll-margin-top:68px}
         <small>&copy; <span id="year">2026</span> Masala Tapri. All rights reserved.</small>
       </div>
       <ul>
-        <li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </footer>
-  <script>
-// Masala Tapri — small enhancements
-(function () {
-  // Mobile navigation
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.getElementById('nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // Footer year
-  var year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  // Menu filters
-  var chips = document.querySelectorAll('.chip');
-  var groups = document.querySelectorAll('.menu-group');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var cat = chip.getAttribute('data-filter');
-      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
-      groups.forEach(function (g) {
-        g.hidden = !(cat === 'all' || g.getAttribute('data-cat') === cat);
-      });
-    });
-  });
-
-  // Contact form validation
-  var form = document.getElementById('contact-form');
-  if (form) {
-    var notice = document.getElementById('form-notice');
-    var rules = {
-      name: function (v) { return v.trim().length >= 2 ? '' : 'Enter your name (at least 2 characters).'; },
-      email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Enter a valid email address, like name@example.com.'; },
-      message: function (v) { return v.trim().length >= 10 ? '' : 'Write a message of at least 10 characters.'; }
-    };
-    var check = function (field) {
-      var input = form.elements[field];
-      var msg = rules[field](input.value);
-      document.getElementById(field + '-error').textContent = msg;
-      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
-      return !msg;
-    };
-    Object.keys(rules).forEach(function (f) {
-      form.elements[f].addEventListener('blur', function () { check(f); });
-    });
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var ok = Object.keys(rules).map(check).every(Boolean);
-      if (!ok) {
-        var firstBad = form.querySelector('[aria-invalid="true"]');
-        if (firstBad) firstBad.focus();
-        return;
-      }
-      notice.textContent = 'Thanks, ' + form.elements.name.value.trim() + '. We got your message and will reply to ' + form.elements.email.value.trim() + ' within a day.';
-      notice.hidden = false;
-      form.reset();
-    });
-  }
-})();
-
-// Highlight the nav link for the section in view
-(function(){
-  var links=document.querySelectorAll('.nav a');
-  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
-  var obs=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
-      var a=map[e.target.id];if(a)a.setAttribute('aria-current','page');}});},{rootMargin:'-40% 0px -55% 0px'});
-  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)obs.observe(s);});
-})();
-
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Masala Tapri</title>
+  <meta name="description" content="Chai, cold drinks and snacks, all under 100 rupees.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="images/favicon.svg" alt="" width="32" height="32">Masala Tapri</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Menu</h1>
+        <p>Prices are in rupees and include all taxes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filter menu by category">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="chai" aria-pressed="false">Chai</button>
+          <button class="chip" data-filter="cold" aria-pressed="false">Cold drinks</button>
+          <button class="chip" data-filter="snacks" aria-pressed="false">Snacks</button>
+        </div>
+
+        <div class="menu-group" data-cat="chai">
+          <h2>Chai</h2>
+          <div class="item">
+      <div><h3>Kadak Masala Chai<span class="tag">Most ordered</span></h3><p>Strong assam, ginger, cardamom and clove.</p></div>
+      <span class="price">&#8377;30</span>
+    </div>
+    <div class="item">
+      <div><h3>Elaichi Chai</h3><p>Milky and fragrant, with green cardamom only.</p></div>
+      <span class="price">&#8377;30</span>
+    </div>
+    <div class="item">
+      <div><h3>Adrak Chai</h3><p>Fresh ginger for cold mornings and sore throats.</p></div>
+      <span class="price">&#8377;30</span>
+    </div>
+    <div class="item">
+      <div><h3>Kulhad Chai</h3><p>Kadak chai in a clay cup.</p></div>
+      <span class="price">&#8377;40</span>
+    </div>
+    <div class="item">
+      <div><h3>Saffron Doodh Chai</h3><p>Milk-forward, with saffron strands added at the first boil.</p></div>
+      <span class="price">&#8377;60</span>
+    </div>
+        </div>
+
+        <div class="menu-group" data-cat="cold">
+          <h2>Cold drinks</h2>
+          <div class="item">
+      <div><h3>Iced Lemon Tea</h3><p>Black tea, lemon and a little jaggery, over ice.</p></div>
+      <span class="price">&#8377;50</span>
+    </div>
+    <div class="item">
+      <div><h3>Mint Cooler</h3><p>Crushed mint, lime, black salt and soda.</p></div>
+      <span class="price">&#8377;50</span>
+    </div>
+    <div class="item">
+      <div><h3>Peach Iced Tea</h3><p>Peach pulp stirred into chilled black tea.</p></div>
+      <span class="price">&#8377;60</span>
+    </div>
+    <div class="item">
+      <div><h3>Nimbu Soda</h3><p>Sweet, salted or mixed. Pick when you order.</p></div>
+      <span class="price">&#8377;40</span>
+    </div>
+        </div>
+
+        <div class="menu-group" data-cat="snacks">
+          <h2>Snacks</h2>
+          <div class="item">
+      <div><h3>Bun Maska</h3><p>Toasted bun with salted butter.</p></div>
+      <span class="price">&#8377;45</span>
+    </div>
+    <div class="item">
+      <div><h3>Bread Pakora</h3><p>Gram-flour fried bread with mint chutney.</p></div>
+      <span class="price">&#8377;35</span>
+    </div>
+    <div class="item">
+      <div><h3>Samosa (2 pieces)</h3><p>Potato and pea filling, served with tamarind chutney.</p></div>
+      <span class="price">&#8377;40</span>
+    </div>
+    <div class="item">
+      <div><h3>Veg Grilled Sandwich</h3><p>Cucumber, tomato, onion and green chutney, pressed until golden.</p></div>
+      <span class="price">&#8377;70</span>
+    </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>Masala Tapri</strong>
+        <small>12 Station Road, Your City &middot; hello@masalatapri.example</small>
+        <small>&copy; <span id="year">2026</span> Masala Tapri. All rights reserved.</small>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

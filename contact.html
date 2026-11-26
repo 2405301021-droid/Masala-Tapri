@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Masala Tapri</title>
+  <meta name="description" content="Opening hours, address and a contact form for Masala Tapri.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="images/favicon.svg" alt="" width="32" height="32">Masala Tapri</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Contact</h1>
+        <p>Questions, bulk orders or event bookings. We reply within a day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Send a message</h2>
+          <p id="form-notice" class="notice" role="status" hidden></p>
+          <form class="form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <p class="error" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <p class="error" id="email-error"></p>
+            </div>
+            <div class="field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>General question</option>
+                <option>Office or bulk order</option>
+                <option>Event booking</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <p class="error" id="message-error"></p>
+            </div>
+            <button class="btn btn--dark" type="submit">Send message</button>
+          </form>
+        </div>
+
+        <div>
+          <h2>Visit us</h2>
+          <p>12 Station Road, Your City<br>Phone: +91 98765 43210<br>Email: <a href="mailto:hello@masalatapri.example">hello@masalatapri.example</a></p>
+          <table class="hours">
+            <caption class="skip">Opening hours</caption>
+            <tr><th scope="row">Mon &ndash; Fri</th><td>7:00 am &ndash; 10:00 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>7:00 am &ndash; 11:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>8:00 am &ndash; 11:00 pm</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>Masala Tapri</strong>
+        <small>12 Station Road, Your City &middot; hello@masalatapri.example</small>
+        <small>&copy; <span id="year">2026</span> Masala Tapri. All rights reserved.</small>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

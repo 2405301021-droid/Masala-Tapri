@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img" aria-label="Clay kulhad cup filled with chai">
+  <ellipse cx="160" cy="316" rx="105" ry="14" fill="#192050" opacity=".18"/>
+  <path d="M70 90 L250 90 L222 296 Q219 314 200 314 L120 314 Q101 314 98 296 Z" fill="#232C6B"/>
+  <path d="M70 90 L250 90 L246 120 L74 120 Z" fill="#2E3A8C"/>
+  <ellipse cx="160" cy="90" rx="90" ry="16" fill="#F4B63A"/>
+  <ellipse cx="160" cy="92" rx="76" ry="10" fill="#C97A1E"/>
+  <path d="M88 160 L232 160 M96 205 L224 205 M104 250 L216 250" stroke="#F4B63A" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 14"/>
+  <path d="M96 124 L112 290" stroke="#fff" stroke-opacity=".25" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#2E6B52"><ellipse cx="42" cy="60" rx="14" ry="7" transform="rotate(-30 42 60)"/><ellipse cx="282" cy="48" rx="12" ry="6" transform="rotate(30 282 48)"/><ellipse cx="270" cy="90" rx="9" ry="5" transform="rotate(-10 270 90)"/></g>
+</svg>

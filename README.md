@@ -2,7 +2,8 @@
 
 A full-stack website for a small chai shop. Visitors can read the story, browse a menu, and send a message through a contact form. The menu is served by a backend API and the messages are saved on the server.
 
-**Author:** ARPIT
+**Author:** YOUR NAME HERE  
+**Roll number:** YOUR ROLL NUMBER HERE  
 **Course:** AI for BBA (UG) Advanced
 
 **Live frontend (Cloudflare):** https://shy-sound-bf35.2405301021.workers.dev
@@ -25,9 +26,9 @@ A full-stack website for a small chai shop. Visitors can read the story, browse 
 
 ## Project structure
 ```
-Masala-Tapri/
+masala-tapri/
 ├── frontend/            # static site served by the backend
-│   ├── index.html, menu.html, about.html, contact.html, 404.html
+│   ├── index.html  menu.html  about.html  contact.html  404.html
 │   ├── css/style.css
 │   ├── js/main.js       # navigation, menu rendering, form submission
 │   └── images/          # SVG artwork and favicon
@@ -35,7 +36,8 @@ Masala-Tapri/
 │   ├── server.js        # HTTP server and API
 │   ├── server.test.js   # automated tests
 │   └── data/
-│       └── menu.json    # menu items (messages.json is created automatically)
+│       ├── menu.json    # menu items
+│       └── messages.json   # created automatically when the first message arrives
 ├── package.json
 └── README.md
 ```
@@ -44,12 +46,12 @@ Masala-Tapri/
 You need **Node.js 18 or newer** (check with `node --version`). There is nothing to install with npm.
 
 ```bash
-git clone https://github.com/2405301021-droid/Masala-Tapri.git
-cd Masala-Tapri
+git clone https://github.com/YOUR-USERNAME/masala-tapri.git
+cd masala-tapri
 npm start
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:3000 in your browser. Use another port with `PORT=4000 npm start` (macOS/Linux) or `set PORT=4000 && npm start` (Windows cmd).
 
 ### Run the tests
 ```bash
@@ -57,11 +59,12 @@ npm test
 ```
 
 ### Read saved messages (optional)
+Start the server with a secret token, then call the admin endpoint:
 ```bash
-ADMIN_TOKEN=mysecret npm start
+ADMIN_TOKEN=mysecret npm start        # Windows cmd: set ADMIN_TOKEN=mysecret && npm start
 curl -H "Authorization: Bearer mysecret" http://localhost:3000/api/messages
 ```
-On Windows cmd use `set ADMIN_TOKEN=mysecret && npm start`. Without `ADMIN_TOKEN` this endpoint is disabled.
+Without `ADMIN_TOKEN` the endpoint is disabled. Messages are also stored in `backend/data/messages.json`.
 
 ## API reference
 | Method | Path | Description |
@@ -70,6 +73,13 @@ On Windows cmd use `set ADMIN_TOKEN=mysecret && npm start`. Without `ADMIN_TOKEN
 | GET | `/api/menu` | Returns all menu categories and items |
 | POST | `/api/contact` | Saves a message. Body: `name`, `email`, `topic`, `message`. Returns `201` or `400` with field errors |
 | GET | `/api/messages` | Admin only. Requires `Authorization: Bearer <ADMIN_TOKEN>` |
+
+Example:
+```bash
+curl -X POST http://localhost:3000/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Asha","email":"asha@example.com","topic":"Event booking","message":"Can you cater 30 people on Friday?"}'
+```
 
 ## Notes
 - The frontend also works as a plain static site (for example on Cloudflare). In that case the menu uses the content already in `menu.html`, and the contact form needs the backend running to save messages.
