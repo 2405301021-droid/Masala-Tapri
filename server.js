@@ -9,7 +9,7 @@ const http = require('node:http');
 const fs = require('node:fs/promises');
 const path = require('node:path');
 
-const FRONTEND_DIR = __dirname;
+const FRONTEND_DIR = path.join(__dirname, '..', 'frontend');
 const MAX_BODY_BYTES = 10 * 1024;
 const TOPICS = ['General question', 'Office or bulk order', 'Event booking'];
 const MIME = {
@@ -24,7 +24,7 @@ const MIME = {
 };
 
 function createServer(options = {}) {
-  const dataDir = options.dataDir || process.env.DATA_DIR || __dirname;
+const dataDir = options.dataDir || process.env.DATA_DIR || path.join(__dirname, 'data');
   const menuFile = path.join(dataDir, 'menu.json');
   const messagesFile = path.join(dataDir, 'messages.json');
   const adminToken = options.adminToken !== undefined ? options.adminToken : process.env.ADMIN_TOKEN;
